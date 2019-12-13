@@ -5,7 +5,7 @@
 		<file>lunacad.groovy</file>
 	</cadEngine>
 	<driveEngine>
-		<git>https://github.com/OperationSmallKat/Luna.git</git>
+		<git>https://github.com/xaveagle/blackcat.git</git>
 		<file>walking.groovy</file>
 	</driveEngine>
 
@@ -992,7 +992,7 @@
 		<Delta>0.0</Delta>
 		<Theta>0.0</Theta>
 		<Radius>40.5</Radius>
-		<Alpha>-90.0</Alpha>
+		<Alpha>-0.0</Alpha>
 	</DHParameters>
 
 </link>
