@@ -5,7 +5,7 @@
 		<file>lunacad.groovy</file>
 	</cadEngine>
 	<driveEngine>
-		<git>https://github.com/xaveagle/blackcat.git</git>
+		<git>https://github.com/OperationSmallKat/Luna.git</git>
 		<file>walking.groovy</file>
 	</driveEngine>
 
