@@ -100,8 +100,8 @@ return new ICadGenerator(){
 		
 				if(linkIndex ==2){
 					legFile = ScriptingEngine.fileFromGit(
-					"https://github.com/OperationSmallKat/SmallKat_V2.git",
-					"STLs/MKCat Foot.stl");
+					"https://github.com/OperationSmallKat/Luna.git",
+					"Ball_Foot.stl");
 				}
 			}
 			else{
@@ -120,8 +120,8 @@ return new ICadGenerator(){
 		
 				if(linkIndex ==2){
 					legFile = ScriptingEngine.fileFromGit(
-					"https://github.com/OperationSmallKat/SmallKat_V2.git",
-					"STLs/MKCat Foot Mirror.stl");
+					"https://github.com/OperationSmallKat/Luna.git",
+					"Ball_Foot.stl");
 		
 				}
 			}
