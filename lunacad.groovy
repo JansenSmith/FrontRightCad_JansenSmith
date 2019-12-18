@@ -56,13 +56,13 @@ return new ICadGenerator(){
 			if(linkIndex ==0){
 				legFile = ScriptingEngine.fileFromGit(
 				"https://github.com/OperationSmallKat/SmallKat_V2.git",
-				"STLs/MKTailandHeadMount.stl");
+				"STLs/LunaHeadMount.stl");
 	
 			}
 			if(linkIndex ==1){
 				legFile = ScriptingEngine.fileFromGit(
 				"https://github.com/OperationSmallKat/SmallKat_V2.git",
-				"STLs/MKTail.stl");
+				"STLs/LunaTail.stl");
 			}
 	
 			
@@ -72,13 +72,13 @@ return new ICadGenerator(){
 			if(linkIndex ==0){
 				legFile = ScriptingEngine.fileFromGit(
 				"https://github.com/OperationSmallKat/SmallKat_V2.git",
-				"STLs/MKTailandHeadMount.stl");
+				"STLs/LunaHeadMount.stl");
 
 			}
 			if(linkIndex ==1){
 				legFile = ScriptingEngine.fileFromGit(
 				"https://github.com/OperationSmallKat/SmallKat_V2.git",
-				"STLs/MKHead.stl");
+				"STLs/LunaHead.stl");
 			}
 	
 			if(linkIndex ==2)
@@ -88,40 +88,40 @@ return new ICadGenerator(){
 				if(linkIndex ==0){
 					legFile = ScriptingEngine.fileFromGit(
 					"https://github.com/OperationSmallKat/SmallKat_V2.git",
-					"STLs/MKCat Shoulder.stl");
+					"STLs/LunaShoulderMirror.stl");
 		
 				}
 				if(linkIndex ==1){
 					legFile = ScriptingEngine.fileFromGit(
 					"https://github.com/OperationSmallKat/SmallKat_V2.git",
-					"STLs/MKCat Leg Mirror.stl");
+					"STLs/LunaKneeMirror.stl");
 		
 				}
 		
 				if(linkIndex ==2){
 					legFile = ScriptingEngine.fileFromGit(
 					"https://github.com/OperationSmallKat/Luna.git",
-					"Ball_Foot.stl");
+					"LunaFootMirror.stl");
 				}
 			}
 			else{
 				if(linkIndex ==0){
 					legFile = ScriptingEngine.fileFromGit(
 					"https://github.com/OperationSmallKat/SmallKat_V2.git",
-					"STLs/MKCat Shoulder Mirror.stl");
+					"STLs/LunaShoulder.stl");
 		
 				}
 				if(linkIndex ==1){
 					legFile = ScriptingEngine.fileFromGit(
 					"https://github.com/OperationSmallKat/SmallKat_V2.git",
-					"STLs/MKCat Leg.stl");
-		
+					"STLs/LunaKnee.stl");
+	
 				}
 		
 				if(linkIndex ==2){
 					legFile = ScriptingEngine.fileFromGit(
 					"https://github.com/OperationSmallKat/Luna.git",
-					"Ball_Foot.stl");
+					"LunaFoot.stl");
 		
 				}
 			}
