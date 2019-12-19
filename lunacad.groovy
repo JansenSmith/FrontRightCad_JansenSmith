@@ -145,18 +145,23 @@ return new ICadGenerator(){
 		if(linkIndex ==0){
 			//body=moveDHValues(body,dh)
 
-			if(limbName.contentEquals("Head")||limbName.contentEquals("Tail")){
+			if(limbName.contentEquals("Head")){
 				body=body
-				//.rotz(90)
-				//.rotx(180)
-				.movex(-41)
+				.movex(55)
+				.movez(-10)
 			
-			}	else{
+			}	
+
+			else if(limbName.contentEquals("Tail")){
 				body=body
-				//.roty(180)
-				//.rotx(180)
-				//if(rear)
-					//body=body.rotx(180)
+				.movex(-15)
+				.movez(-6)
+			
+			}
+			
+			else{
+				body=body
+
 			}
 				
 		}
@@ -165,25 +170,20 @@ return new ICadGenerator(){
 
 			if(limbName.contentEquals("Head")){
 				body=body
-				//.roty(180)
 				.movex(50)
-					//.movey(-18)
-					//.movez(-38.5)
+				.movez(-13)
 			}else if(limbName.contentEquals("Tail")){
 				body=body
-				//.roty(180)
 				.movex(-150)
-				//.rotz(-90)
-				//.movey(125)
+				.movez(-9)
 			
 			}else{
 				body=body
-				//.roty(180)
 			}
 		}
 		if(linkIndex ==2){
 			body=body
-			//.roty(180)
+
 		
 		}
 		
