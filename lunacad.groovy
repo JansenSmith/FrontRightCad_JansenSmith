@@ -55,14 +55,14 @@ return new ICadGenerator(){
 				return allCad;
 			if(linkIndex ==0){
 				legFile = ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/SmallKat_V2.git",
-				"STLs/LunaHeadMount.stl");
+				"https://github.com/OperationSmallKat/Luna.git",
+				"LunaTailMount.stl");
 	
 			}
 			if(linkIndex ==1){
 				legFile = ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/SmallKat_V2.git",
-				"STLs/LunaTail.stl");
+				"https://github.com/OperationSmallKat/Luna.git",
+				"LunaTail.stl");
 			}
 	
 			
@@ -71,14 +71,14 @@ return new ICadGenerator(){
 				return allCad;
 			if(linkIndex ==0){
 				legFile = ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/SmallKat_V2.git",
-				"STLs/LunaHeadMount.stl");
+				"https://github.com/OperationSmallKat/Luna.git",
+				"LunaHeadMount.stl");
 
 			}
 			if(linkIndex ==1){
 				legFile = ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/SmallKat_V2.git",
-				"STLs/LunaHead.stl");
+				"https://github.com/OperationSmallKat/Luna.git",
+				"LunaHead.stl");
 			}
 	
 			if(linkIndex ==2)
@@ -87,14 +87,14 @@ return new ICadGenerator(){
 			if(leftSide){
 				if(linkIndex ==0){
 					legFile = ScriptingEngine.fileFromGit(
-					"https://github.com/OperationSmallKat/SmallKat_V2.git",
-					"STLs/LunaShoulderMirror.stl");
+					"https://github.com/OperationSmallKat/Luna.git",
+					"LunaShoulderMirror.stl");
 		
 				}
 				if(linkIndex ==1){
 					legFile = ScriptingEngine.fileFromGit(
-					"https://github.com/OperationSmallKat/SmallKat_V2.git",
-					"STLs/LunaKneeMirror.stl");
+					"https://github.com/OperationSmallKat/Luna.git",
+					"LunaKneeMirror.stl");
 		
 				}
 		
@@ -107,14 +107,14 @@ return new ICadGenerator(){
 			else{
 				if(linkIndex ==0){
 					legFile = ScriptingEngine.fileFromGit(
-					"https://github.com/OperationSmallKat/SmallKat_V2.git",
-					"STLs/LunaShoulder.stl");
+					"https://github.com/OperationSmallKat/Luna.git",
+					"LunaShoulder.stl");
 		
 				}
 				if(linkIndex ==1){
 					legFile = ScriptingEngine.fileFromGit(
-					"https://github.com/OperationSmallKat/SmallKat_V2.git",
-					"STLs/LunaKnee.stl");
+					"https://github.com/OperationSmallKat/Luna.git",
+					"LunaKnee.stl");
 	
 				}
 		
@@ -147,15 +147,15 @@ return new ICadGenerator(){
 
 			if(limbName.contentEquals("Head")||limbName.contentEquals("Tail")){
 				body=body
-				.rotz(90)
-				.rotx(180)
+				//.rotz(90)
+				//.rotx(180)
 				.movex(-41)
-				.movey(-21)
-				.movez(-22)
+				//.movey(-21)
+				//.movez(-22)
 					//.movez(-11.5)
 			}	else{
 				body=body.roty(180)
-				.rotx(180)
+				//.rotx(180)
 				//if(rear)
 					//body=body.rotx(180)
 			}
@@ -166,23 +166,26 @@ return new ICadGenerator(){
 
 			if(limbName.contentEquals("Head")){
 				body=body
-				.roty(180)
+				//.roty(180)
 				.movex(50)
 					//.movey(-18)
 					//.movez(-38.5)
 			}else if(limbName.contentEquals("Tail")){
 				body=body
-				.roty(180)
-				//.movex(125)
+				//.roty(180)
+				.movex(-150)
 				//.rotz(-90)
 				//.movey(125)
+			
 			}else{
-				body=body.roty(180)
+				body=body
+				//.roty(180)
 			}
 		}
 		if(linkIndex ==2){
-			body=body.roty(180)
-
+			body=body
+			//.roty(180)
+		
 		}
 		
 		body.setManipulator(manipulator);
@@ -199,8 +202,8 @@ return new ICadGenerator(){
 		ArrayList<CSG> allCad=new ArrayList<>();
 
 		File mainBodyFile = ScriptingEngine.fileFromGit(
-			"https://github.com/OperationSmallKat/SmallKat_V2.git",
-			"STLs/LunaBody.stl");
+			"https://github.com/OperationSmallKat/Luna.git",
+			"LunaBody.stl");
 
 		// Load the .CSG from the disk and cache it in memory
 		CSG body  = Vitamins.get(mainBodyFile)
