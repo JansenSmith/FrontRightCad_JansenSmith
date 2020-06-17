@@ -1,0 +1,98 @@
+Print List
+
+Body: x1
+STLs:
+-Body x1
+-Servo Cover x4
+-Battery Cover x1
+-Body Cover Left x1
+-Body Cover Right x1
+Hardware: 
+-M3x20 x8
+-M3 Lock Nut x8 
+-M2.5x12 x4
+-M2.5 Lock Nut x4
+-MG92B x4
+Electronics:
+-Motherboard
+-Battery 
+
+Head: x1
+STLs: 
+-Head x1
+-Head Limb x1
+-Drive Limb x1
+-(Optional Assembly) Servo Horn Limb x1
+-Tail Head Base x1
+-Tail Head Cover x1
+-Tal Head Cover x1
+-Tail Head Encoder Limb x1
+-Tail Head Drive Limb x1
+-(Optional Assembly) Tail Head Servo Horn Limb x1
+Hardware:
+-M3x20 x4
+-M3x45 x1
+-M2.5 x1
+-M2.5 Lock Nut x1
+-M3 Lock Nut x5 
+-MG92B x1
+-(Optional Assembly) Servo Horn x2
+
+Tail: x1
+STLs: 
+-Tail x1
+-Drive Limb x1
+-(Optional Assembly) Servo Horn Limb x1
+-Tail Head Base x1
+-Tail Head Cover x1
+-Tal Head Cover x1
+-Tail Head Encoder Limb x1
+-Tail Head Drive Limb x1
+-(Optional Assembly) Tail Head Servo Horn Limb x1
+Hardware:
+-M3x20 x5
+-M3 Lock Nut x5 
+-M2.5 x1
+-M2.5 Lock Nut x1
+-MG92B x1
+-(Optional Assembly) Servo Horn x2
+
+Legs Right: x2
+STLs:
+-Drive Limb x3
+-(Optional Assembly) Servo Horn Limb x3
+-Encoder Limb x3
+-Shoulder Base x1
+-Servo Cover 2 x1
+-Knee Base x1
+-Knee Top x1
+-Foot x1
+-Calibration Jig Right
+Hardware:
+-M3x20 x2
+-M3x45 x3
+-M3 Lock Nut x5 
+-M2.5x8 x3
+-M2.5 Nut x3 
+-MG92B x2
+-(Optional Assembly) Servo Horn x3
+
+Legs Left: x2
+STLs:
+-Drive Limb x3
+-(Optional Assembly) Servo Horn Limb x3
+-Encoder Limb x3
+-Shoulder Base Mirror x1
+-Servo Cover 2 x1
+-Knee Base x1
+-Knee Top x1
+-Foot x1
+-Calibration Jig Left
+Hardware:
+-M3x20 x2
+-M3x45 x3
+-M3 Lock Nut x5 
+-M2.5x8 x3
+-M2.5 Nut x3 
+-MG92B x2
+-(Optional Assembly) Servo Horn x3
