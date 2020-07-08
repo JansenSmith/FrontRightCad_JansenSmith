@@ -209,7 +209,7 @@ return new ICadGenerator(){
 			"https://github.com/OperationSmallKat/Luna.git",
 			"Servo Cover.stl"))
 			.roty(90)
-			.movex(20)
+			.movex(20-6.75)
 			.movez(-83)
 			.movey(42.5)
 			
@@ -217,7 +217,7 @@ return new ICadGenerator(){
 		for(DHParameterKinematics leg:b.getLegs()){
 			Transform t = TransformFactory.nrToCSG(leg.getRobotToFiducialTransform())
 			movedSHoulder.add(srv.transformed(t))
-			movedSHoulder.add(new Cube(5).toCSG().transformed(t))
+			movedSHoulder.add(new Cube(0.1,0.1,200).toCSG().transformed(t))
 		}
 			
 		def myMovedLinks =[
@@ -235,14 +235,15 @@ return new ICadGenerator(){
 				"https://github.com/OperationSmallKat/Luna.git",
 				"Body Cover Right.stl"))
 			].collect{
-			it.movez(100)
+			it.movez(106.75)
+			.setColor(javafx.scene.paint.Color.DARKGRAY)
 		} 
 		
 		myMovedLinks.addAll(movedSHoulder)
 		
 		for(def part:myMovedLinks){
 			part.setManipulator(b.getRootListener());
-			part.setColor(javafx.scene.paint.Color.WHITE)
+			
 		}
 		
 
