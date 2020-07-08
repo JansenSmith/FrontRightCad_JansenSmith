@@ -204,12 +204,7 @@ return new ICadGenerator(){
 
 
 		// Load the .CSG from the disk and cache it in memory
-		CSG body  = Vitamins.get(ScriptingEngine.fileFromGit(
-			"https://github.com/OperationSmallKat/Luna.git",
-			"Body.stl"))
-		CSG body2  = Vitamins.get(ScriptingEngine.fileFromGit(
-			"https://github.com/OperationSmallKat/Luna.git",
-			"Body Battery Cover.stl"))
+	
 		CSG srv  = Vitamins.get(ScriptingEngine.fileFromGit(
 			"https://github.com/OperationSmallKat/Luna.git",
 			"Servo Cover.stl"))
@@ -225,7 +220,21 @@ return new ICadGenerator(){
 			movedSHoulder.add(new Cube(5).toCSG().transformed(t))
 		}
 			
-		def myMovedLinks =[body,body2].collect{
+		def myMovedLinks =[
+			
+			Vitamins.get(ScriptingEngine.fileFromGit(
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Body.stl")),
+			Vitamins.get(ScriptingEngine.fileFromGit(
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Body Battery Cover.stl")),
+			Vitamins.get(ScriptingEngine.fileFromGit(
+				"https://github.com/OperationSmallKat/Luna.git",
+				"Body Cover Left.stl")),
+			Vitamins.get(ScriptingEngine.fileFromGit(
+				"https://github.com/OperationSmallKat/Luna.git",
+				"Body Cover Right.stl"))
+			].collect{
 			it.movez(100)
 		} 
 		
