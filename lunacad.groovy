@@ -200,19 +200,23 @@ return new ICadGenerator(){
 	public ArrayList<CSG> generateBody(MobileBase b ) {
 		ArrayList<CSG> allCad=new ArrayList<>();
 
-		File mainBodyFile = ScriptingEngine.fileFromGit(
-			"https://github.com/OperationSmallKat/Luna.git",
-			"LunaBody.stl");
+
 
 		// Load the .CSG from the disk and cache it in memory
-		CSG body  = Vitamins.get(mainBodyFile)
-
-		body.setManipulator(b.getRootListener());
-		body.setColor(javafx.scene.paint.Color.WHITE)
-		def parts = [body ] as ArrayList<CSG>
-		for(int i=0;i<parts.size();i++){
-			parts.get(i).setColor(javafx.scene.paint.Color.GRAY)
+		CSG body  = Vitamins.get(ScriptingEngine.fileFromGit(
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Body.stl"))
+		CSG body2  = Vitamins.get(ScriptingEngine.fileFromGit(
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Body Battery Cover.stl"))
+			
+		def myMovedLinks =[body,body2].collect{it.movex(30)} 
+		for(def part:myMovedLinks){
+			part.setManipulator(b.getRootListener());
+			part.setColor(javafx.scene.paint.Color.WHITE)
 		}
-		return parts;
+		
+
+		return myMovedLinks;
 	}
 };
