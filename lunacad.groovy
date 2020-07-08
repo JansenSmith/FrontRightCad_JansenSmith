@@ -217,7 +217,7 @@ return new ICadGenerator(){
 		for(DHParameterKinematics leg:b.getLegs()){
 			Transform t = TransformFactory.nrToCSG(leg.getRobotToFiducialTransform())
 			movedSHoulder.add(srv.transformed(t))
-			movedSHoulder.add(new Cube(0.1,0.1,200).toCSG().transformed(t))
+			//movedSHoulder.add(new Cube(0.1,0.1,200).toCSG().transformed(t))
 		}
 			
 		def myMovedLinks =[
