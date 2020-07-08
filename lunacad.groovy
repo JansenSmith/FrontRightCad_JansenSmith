@@ -12,6 +12,7 @@ import com.neuronrobotics.sdk.addons.kinematics.math.TransformNR
 import java.nio.file.Paths;
 
 import eu.mihosoft.vrl.v3d.CSG
+import eu.mihosoft.vrl.v3d.Cube
 import eu.mihosoft.vrl.v3d.FileUtil;
 import eu.mihosoft.vrl.v3d.Transform;
 import javafx.scene.transform.Affine;
@@ -209,8 +210,27 @@ return new ICadGenerator(){
 		CSG body2  = Vitamins.get(ScriptingEngine.fileFromGit(
 			"https://github.com/OperationSmallKat/Luna.git",
 			"Body Battery Cover.stl"))
+		CSG srv  = Vitamins.get(ScriptingEngine.fileFromGit(
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Servo Cover.stl"))
+			.roty(90)
+			.movex(20)
+			.movez(-83)
+			.movey(42.5)
 			
-		def myMovedLinks =[body,body2].collect{it.movex(30)} 
+		def movedSHoulder=[]
+		for(DHParameterKinematics leg:b.getLegs()){
+			Transform t = TransformFactory.nrToCSG(leg.getRobotToFiducialTransform())
+			movedSHoulder.add(srv.transformed(t))
+			movedSHoulder.add(new Cube(5).toCSG().transformed(t))
+		}
+			
+		def myMovedLinks =[body,body2].collect{
+			it.movez(100)
+		} 
+		
+		myMovedLinks.addAll(movedSHoulder)
+		
 		for(def part:myMovedLinks){
 			part.setManipulator(b.getRootListener());
 			part.setColor(javafx.scene.paint.Color.WHITE)
