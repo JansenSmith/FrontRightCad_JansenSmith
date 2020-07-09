@@ -115,14 +115,14 @@ return new ICadGenerator(){
 				if(linkIndex ==1){
 					legFile = ScriptingEngine.fileFromGit(
 					"https://github.com/OperationSmallKat/Luna.git",
-					"LunaKnee.stl");
+					"Knee.stl");
 	
 				}
 		
 				if(linkIndex ==2){
 					legFile = ScriptingEngine.fileFromGit(
 					"https://github.com/OperationSmallKat/Luna.git",
-					"LunaFoot.stl");
+					"Foot.stl");
 		
 				}
 			}
@@ -218,8 +218,7 @@ return new ICadGenerator(){
 			Transform t = TransformFactory.nrToCSG(leg.getRobotToFiducialTransform())
 			movedSHoulder.add(srv.transformed(t))
 			//movedSHoulder.add(new Cube(0.1,0.1,200).toCSG().transformed(t))
-		}
-			
+		}	
 		def myMovedLinks =[
 			
 			Vitamins.get(ScriptingEngine.fileFromGit(
@@ -233,7 +232,15 @@ return new ICadGenerator(){
 				"Body Cover Left.stl")),
 			Vitamins.get(ScriptingEngine.fileFromGit(
 				"https://github.com/OperationSmallKat/Luna.git",
-				"Body Cover Right.stl"))
+				"Body Cover Right.stl")),
+			Vitamins.get(ScriptingEngine.fileFromGit(
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Tail Head Encoder Limb.stl"))
+			.rotx(-90)
+			.movex(-92.5)
+			.movez(12.825)
+			.movey(-16.5)
+			
 			].collect{
 			it.movez(106.75)
 			.setColor(javafx.scene.paint.Color.DARKGRAY)
