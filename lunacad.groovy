@@ -228,18 +228,41 @@ return new ICadGenerator(){
 			"https://github.com/OperationSmallKat/Luna.git",
 			"Body Battery Cover.stl")),
 			Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
-				"Body Cover Left.stl")),
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Body Cover Left.stl")),
 			Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
-				"Body Cover Right.stl")),
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Body Cover Right.stl")),
 			Vitamins.get(ScriptingEngine.fileFromGit(
 			"https://github.com/OperationSmallKat/Luna.git",
 			"Tail Head Encoder Limb.stl"))
 			.rotx(-90)
 			.movex(-92.5)
 			.movez(12.825)
-			.movey(-16.5)
+			.movey(-16.5),
+			Vitamins.get(ScriptingEngine.fileFromGit(
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Tail Head Encoder Limb.stl"))
+			.rotx(-90)
+			.rotz(180)
+			.movex(92.5)
+			.movez(12.825)
+			.movey(16.5),
+			Vitamins.get(ScriptingEngine.fileFromGit(
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Tail Head Servo Horn Limb.stl"))
+			.rotx(-90)
+			.movex(92.5)
+			.movez(12.825)
+			.movey(-16.5),
+			Vitamins.get(ScriptingEngine.fileFromGit(
+			"https://github.com/OperationSmallKat/Luna.git",
+			"Tail Head Servo Horn Limb.stl"))
+			.rotx(-90)
+			.rotz(180)
+			.movex(-92.5)
+			.movez(12.825)
+			.movey(16.5)
 			
 			].collect{
 			it.movez(106.75)
