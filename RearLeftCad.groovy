@@ -43,13 +43,15 @@ return new ICadGenerator(){
 				
 //					//to skip links use 'continue'
 					if(	(linkIndex==2 && i==0)||
-						(linkIndex==0 && i<2)
+						(linkIndex==0 && i==1)
 					) {
 						continue;// this is the foot, stays in normal orenataiton
 					}
 //					// rotate all the parts about x
-
-					allCad[i]=allCad[i].rotx(180)
+					if(linkIndex==0 && i==0)
+						allCad[i]=allCad[i].mirrorz();
+					else
+						allCad[i]=allCad[i].rotx(180)
 					if(linkIndex==0 && i>=2 )
 						allCad[i]=allCad[i].movey(13.60)
 //					// add extra rotations to specific links
