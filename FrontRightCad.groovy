@@ -142,7 +142,7 @@ return new ICadGenerator(){
 		Affine manipulator = dh.getListener();
 		
 		for(CSG body: allCad)
-		body.setManipulator(manipulator);
+			body.setManipulator(manipulator);
 		
 		return allCad;
 		
