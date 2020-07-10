@@ -32,26 +32,27 @@ return new ICadGenerator(){
 
 			@Override
 			public ArrayList<CSG> generateCad(DHParameterKinematics d, int linkIndex) {
-				println "Front Left "+d
+				println "Rear Left "+d
 				ArrayList<DHLink> dhLinks = d.getChain().getLinks()
 				DHLink dh = dhLinks.get(linkIndex)
 
 				ArrayList<CSG> allCad = engine.generateCad( d,  linkIndex);// use the other script to initiall allign the STLs
 
 				for(int i=0;i<allCad.size();i++) {
-					//to skip links use 'continue'
+					Affine manipulator = allCad[i].getManipulator()
+				
+//					//to skip links use 'continue'
 					if(	(linkIndex==2 && i==0)||
-						(linkIndex==0 && i!=0)
+						(linkIndex==0 && i<2)
 					) {
 						continue;// this is the foot, stays in normal orenataiton
 					}
-					// rotate all the parts about x
-					Affine manipulator = allCad[i].getManipulator()
-					if(linkIndex==0 && i==0)
-						allCad[i]=allCad[i].mirrorz(); // this part is mirrored not rotated
-					else
-						allCad[i]=allCad[i].rotx(180)
-					// add extra rotations to specific links
+//					// rotate all the parts about x
+
+					allCad[i]=allCad[i].rotx(180)
+					if(linkIndex==0 && i>=2 )
+						allCad[i]=allCad[i].movey(13.60)
+//					// add extra rotations to specific links
 					if(linkIndex==2 && i!=0 ) {
 						Transform move1 = TransformFactory.nrToCSG(new TransformNR(dh.DhStep(0)))// move to link rotation space
 						Transform move= move1.rotz(-15)// rotate about the link axis
@@ -64,6 +65,7 @@ return new ICadGenerator(){
 				}
 
 				return allCad;
+
 
 			}
 
