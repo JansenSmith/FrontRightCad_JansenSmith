@@ -23,54 +23,54 @@ println "Loading STL file"
 // Loading a local file also works here
 
 return new ICadGenerator(){
-	ICadGenerator engine=ScriptingEngine.gitScriptRun(
-		"https://github.com/OperationSmallKat/Luna.git", // git location of the library
-		"FrontRightCad.groovy" , // file to load
-		null
-		)
-	private CSG moveDHValues(CSG incoming,DHLink dh ){
-		
-		return incoming.transformed(move)
-		
-	}
+			ICadGenerator engine=ScriptingEngine.gitScriptRun(
+			"https://github.com/OperationSmallKat/Luna.git", // git location of the library
+			"FrontRightCad.groovy" , // file to load
+			null
+			)
 
-	@Override 
-	public ArrayList<CSG> generateCad(DHParameterKinematics d, int linkIndex) {
-		println "Front Left "+d
-		ArrayList<DHLink> dhLinks = d.getChain().getLinks()
-		DHLink dh = dhLinks.get(linkIndex)
-		
-		ArrayList<CSG> allCad = engine.generateCad( d,  linkIndex);// use the other script to initiall allign the STLs
-		
-		for(int i=0;i<allCad.size();i++) {
-			//to skip links use 'continue'
-			if((linkIndex==2 && i==0)|| 
-				(linkIndex==0)
-				) {
-				continue;// this is the foot, stays in normal orenataiton
-			}
-			// rotate all the parts about x
-			Affine manipulator = allCad[i].getManipulator()
-			allCad[i]=allCad[i].rotx(180)
-			// add extra rotations to specific links
-			if(linkIndex==2 && i!=0 ) {
-				Transform move1 = TransformFactory.nrToCSG(new TransformNR(dh.DhStep(0)))// move to link rotation space
-				Transform move= move1.rotz(-15)// rotate about the link axis
-				allCad[i]=allCad[i].transformed(move)// apply my new rotation
-				.transformed(move1.inverse());// remove the transform that moved to link space, moving part back
-			}
-			
-			allCad[i].setManipulator(manipulator)
-		}
-		
-		return allCad;
-		
-	}
 
-	@Override
-	public ArrayList<CSG> generateBody(MobileBase arg0) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-	
-};
+			@Override
+			public ArrayList<CSG> generateCad(DHParameterKinematics d, int linkIndex) {
+				println "Front Left "+d
+				ArrayList<DHLink> dhLinks = d.getChain().getLinks()
+				DHLink dh = dhLinks.get(linkIndex)
+
+				ArrayList<CSG> allCad = engine.generateCad( d,  linkIndex);// use the other script to initiall allign the STLs
+
+				for(int i=0;i<allCad.size();i++) {
+					//to skip links use 'continue'
+					if((linkIndex==2 && i==0)||
+					(linkIndex==0 && i!=0)
+					) {
+						continue;// this is the foot, stays in normal orenataiton
+					}
+					// rotate all the parts about x
+					Affine manipulator = allCad[i].getManipulator()
+					if(linkIndex==0 && i==0)
+						allCad[i]=allCad[i].mirrorz(); // this part is mirrored not rotated
+					else
+						allCad[i]=allCad[i].rotx(180)
+					// add extra rotations to specific links
+					if(linkIndex==2 && i!=0 ) {
+						Transform move1 = TransformFactory.nrToCSG(new TransformNR(dh.DhStep(0)))// move to link rotation space
+						Transform move= move1.rotz(-15)// rotate about the link axis
+						allCad[i]=allCad[i].transformed(move)// apply my new rotation
+								.transformed(move1.inverse());// remove the transform that moved to link space, moving part back
+					}
+
+
+					allCad[i].setManipulator(manipulator)
+				}
+
+				return allCad;
+
+			}
+
+			@Override
+			public ArrayList<CSG> generateBody(MobileBase arg0) {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+		};

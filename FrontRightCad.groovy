@@ -33,7 +33,7 @@ return new ICadGenerator(){
 
 	@Override 
 	public ArrayList<CSG> generateCad(DHParameterKinematics d, int linkIndex) {
-		println "\n\n\nNew limb "+d
+		//println "\n\n\nNew limb "+d
 		
 		ArrayList<CSG> allCad=new ArrayList<>();
 		File legFile = null
