@@ -85,7 +85,7 @@ return new ICadGenerator(){
 			if(linkIndex ==2)
 				return allCad;
 		}else{
-			//if(leftSide){
+			if(leftSide){
 				if(linkIndex ==0){
 					legFile = ScriptingEngine.fileFromGit(
 					"https://github.com/OperationSmallKat/Luna.git",
@@ -104,7 +104,7 @@ return new ICadGenerator(){
 					"https://github.com/OperationSmallKat/Luna.git",
 					"LunaFootMirror.stl");
 				}
-			//}
+			}
 			else{
 				if(linkIndex ==0){
 					legFile = ScriptingEngine.fileFromGit(
