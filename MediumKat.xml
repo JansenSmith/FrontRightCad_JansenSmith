@@ -417,7 +417,7 @@
 <name>FrontLeft</name>
 	<cadEngine>
 		<git>https://github.com/OperationSmallKat/Luna.git</git>
-		<file>lunacad.groovy</file>
+		<file>FrontRightCad.groovy</file>
 	</cadEngine>
 	<kinematics>
 		<git>https://gist.github.com/17f2da51abe25e043043946d91610ddd.git</git>
@@ -618,7 +618,7 @@
 <name>RearRight</name>
 	<cadEngine>
 		<git>https://github.com/OperationSmallKat/Luna.git</git>
-		<file>lunacad.groovy</file>
+		<file>FrontRightCad.groovy</file>
 	</cadEngine>
 	<kinematics>
 		<git>https://gist.github.com/17f2da51abe25e043043946d91610ddd.git</git>
