@@ -33,7 +33,7 @@ return new ICadGenerator(){
 
 	@Override 
 	public ArrayList<CSG> generateCad(DHParameterKinematics d, int linkIndex) {
-		ArrayList<CSG> allCad=new ArrayList<>();
+		return new ArrayList<>();
 		String limbName = d.getScriptingName()
 		File legFile = null
 		boolean mirror=true
