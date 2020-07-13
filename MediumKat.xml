@@ -819,7 +819,7 @@
 <name>Head</name>
 	<cadEngine>
 		<git>https://github.com/OperationSmallKat/Luna.git</git>
-		<file>lunacad.groovy</file>
+		<file>HeadCad.groovy</file>
 	</cadEngine>
 	<kinematics>
 		<git>https://github.com/madhephaestus/carl-the-hexapod.git</git>
@@ -876,8 +876,8 @@
 	<DHParameters>
 		<Delta>0.0</Delta>
 		<Theta>0.0</Theta>
-		<Radius>40.247804878048775</Radius>
-		<Alpha>-90.0</Alpha>
+		<Radius>0.0</Radius>
+		<Alpha>0.0</Alpha>
 	</DHParameters>
 
 </link>
@@ -949,9 +949,9 @@
 </ZframeToRAS>
 
 <baseToZframe>
-	<x>25.0</x>
+	<x>92.5</x>
 	<y>0.0</y>
-	<z>110.0</z>
+	<z>119.575</z>
 	<rotw>0.7071067811865476</rotw>
 	<rotx>-0.7071067811865475</rotx>
 	<roty>-0.0</roty>
