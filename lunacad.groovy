@@ -212,6 +212,7 @@ return new ICadGenerator(){
 			.movex(20-6.75)
 			.movez(-83)
 			.movey(42.5)
+			.setColor(javafx.scene.paint.Color.YELLOW)
 			
 		def movedSHoulder=[]
 		for(DHParameterKinematics leg:b.getLegs()){
@@ -223,19 +224,24 @@ return new ICadGenerator(){
 			
 			Vitamins.get(ScriptingEngine.fileFromGit(
 			"https://github.com/OperationSmallKat/Luna.git",
-			"Body.stl")),
+			"Body.stl"))
+			.setColor(javafx.scene.paint.Color.DARKGRAY),
 			Vitamins.get(ScriptingEngine.fileFromGit(
 			"https://github.com/OperationSmallKat/Luna.git",
-			"Body Battery Cover.stl")),
+			"Body Battery Cover.stl"))
+			.setColor(javafx.scene.paint.Color.YELLOW),
 			Vitamins.get(ScriptingEngine.fileFromGit(
 			"https://github.com/OperationSmallKat/Luna.git",
-			"Body Cover Left.stl")),
+			"Body Cover Left.stl"))
+			.setColor(javafx.scene.paint.Color.DARKGRAY),
 			Vitamins.get(ScriptingEngine.fileFromGit(
 			"https://github.com/OperationSmallKat/Luna.git",
-			"Body Cover Right.stl")),
+			"Body Cover Right.stl"))
+			.setColor(javafx.scene.paint.Color.DARKGRAY),
 			Vitamins.get(ScriptingEngine.fileFromGit(
 			"https://github.com/OperationSmallKat/Luna.git",
 			"Tail Head Encoder Limb.stl"))
+			.setColor(javafx.scene.paint.Color.YELLOW)
 			.rotx(-90)
 			.movex(-92.5)
 			.movez(12.825)
@@ -243,6 +249,7 @@ return new ICadGenerator(){
 			Vitamins.get(ScriptingEngine.fileFromGit(
 			"https://github.com/OperationSmallKat/Luna.git",
 			"Tail Head Encoder Limb.stl"))
+			.setColor(javafx.scene.paint.Color.YELLOW)
 			.rotx(-90)
 			.rotz(180)
 			.movex(92.5)
@@ -254,7 +261,8 @@ return new ICadGenerator(){
 			.rotx(-90)
 			.movex(92.5)
 			.movez(12.825)
-			.movey(-16.5),
+			.movey(-16.5)
+			.setColor(javafx.scene.paint.Color.YELLOW),
 			Vitamins.get(ScriptingEngine.fileFromGit(
 			"https://github.com/OperationSmallKat/Luna.git",
 			"Tail Head Servo Horn Limb.stl"))
@@ -263,10 +271,10 @@ return new ICadGenerator(){
 			.movex(-92.5)
 			.movez(12.825)
 			.movey(16.5)
+			.setColor(javafx.scene.paint.Color.YELLOW)
 			
 			].collect{
 			it.movez(106.75)
-			.setColor(javafx.scene.paint.Color.DARKGRAY)
 		} 
 		
 		myMovedLinks.addAll(movedSHoulder)
