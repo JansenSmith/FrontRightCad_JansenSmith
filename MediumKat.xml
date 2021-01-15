@@ -226,7 +226,7 @@
 	<name>basePan</name>
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
-	<index>0</index>
+	<index>2</index>
 	<scale>-0.512698413</scale>
 	<upperLimit>101.25000000000001</upperLimit>
 	<lowerLimit>30.0</lowerLimit>
@@ -338,7 +338,7 @@
 	<name>elbow</name>
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
-	<index>2</index>
+	<index>0</index>
 	<scale>0.513</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
