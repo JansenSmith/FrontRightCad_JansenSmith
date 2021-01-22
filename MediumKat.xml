@@ -26,7 +26,7 @@
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
 	<index>10</index>
-	<scale>0.513</scale>
+	<scale>0.574</scale>
 	<upperLimit>140.625</upperLimit>
 	<lowerLimit>61.87500000000001</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -82,7 +82,7 @@
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
 	<index>9</index>
-	<scale>-0.513</scale>
+	<scale>-0.574</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -283,7 +283,7 @@
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
 	<index>1</index>
-	<scale>0.513</scale>
+	<scale>0.574</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -339,7 +339,7 @@
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
 	<index>0</index>
-	<scale>0.513</scale>
+	<scale>0.574</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -484,7 +484,7 @@
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
 	<index>6</index>
-	<scale>-0.513</scale>
+	<scale>-0.574</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -540,7 +540,7 @@
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
 	<index>7</index>
-	<scale>-0.513</scale>
+	<scale>-0.574</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -629,7 +629,7 @@
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
 	<index>13</index>
-	<scale>0.513</scale>
+	<scale>0.574</scale>
 	<upperLimit>118.12500000000001</upperLimit>
 	<lowerLimit>7.5</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -685,7 +685,7 @@
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
 	<index>14</index>
-	<scale>0.513</scale>
+	<scale>0.574</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -741,7 +741,7 @@
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
 	<index>15</index>
-	<scale>0.513</scale>
+	<scale>0.574</scale>
 	<upperLimit>180.0</upperLimit>
 	<lowerLimit>0.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
@@ -886,7 +886,7 @@
 	<deviceName>midnight</deviceName>
 	<type>hidfast</type>
 	<index>4</index>
-	<scale>-0.513</scale>
+	<scale>-0.574</scale>
 	<upperLimit>131.25000000000003</upperLimit>
 	<lowerLimit>5.0</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
