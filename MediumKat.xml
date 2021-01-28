@@ -27,8 +27,8 @@
 	<type>hidfast</type>
 	<index>10</index>
 	<scale>0.574</scale>
-	<upperLimit>140.625</upperLimit>
-	<lowerLimit>61.87500000000001</lowerLimit>
+	<upperLimit>180</upperLimit>
+	<lowerLimit>1</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity>
 	<staticOffset>90</staticOffset>
@@ -227,8 +227,8 @@
 	<type>hidfast</type>
 	<index>2</index>
 	<scale>-0.512698413</scale>
-	<upperLimit>101.25000000000001</upperLimit>
-	<lowerLimit>30.0</lowerLimit>
+	<upperLimit>180</upperLimit>
+	<lowerLimit>1</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity><staticOffset>90</staticOffset>
 	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
@@ -426,8 +426,8 @@
 	<type>hidfast</type>
 	<index>5</index>
 	<scale>-0.512698413</scale>
-	<upperLimit>138.75000000000003</upperLimit>
-	<lowerLimit>35.625</lowerLimit>
+	<upperLimit>180</upperLimit>
+	<lowerLimit>1</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity><staticOffset>90</staticOffset>
 	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
@@ -626,8 +626,8 @@
 	<type>hidfast</type>
 	<index>13</index>
 	<scale>0.574</scale>
-	<upperLimit>118.12500000000001</upperLimit>
-	<lowerLimit>7.5</lowerLimit>
+	<upperLimit>180</upperLimit>
+	<lowerLimit>1</lowerLimit>
 	<upperVelocity>1.0E8</upperVelocity>
 	<lowerVelocity>-1.0E8</lowerVelocity><staticOffset>90</staticOffset>
 	<deviceTheoreticalMax>180.0</deviceTheoreticalMax>
