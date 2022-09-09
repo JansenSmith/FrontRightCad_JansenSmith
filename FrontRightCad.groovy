@@ -39,19 +39,19 @@ return new ICadGenerator(){
 		File legFile = null
 		if(linkIndex ==0){
 			CSG shoulder  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Shoulder Base.stl"))
 				.rotz(180)
 				.rotx(180)
 				.setColor(javafx.scene.paint.Color.DARKGREY)
 			CSG shouldertop  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Servo Cover 2.stl"))
 				.rotz(180)
 				.rotx(180)
 				.setColor(javafx.scene.paint.Color.DARKGREY)
 			CSG dlimb  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Drive Limb.stl"))
 				.rotz(180)
 				.rotx(90)
@@ -59,7 +59,7 @@ return new ICadGenerator(){
 				.movey(23.56)
 				.setColor(javafx.scene.paint.Color.YELLOW)
 			CSG elimb  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Encoder Limb.stl"))
 				.rotz(180)
 				.rotx(-90)
@@ -74,24 +74,24 @@ return new ICadGenerator(){
 		}
 		if(linkIndex ==1){
 			CSG knee  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Knee Base.stl"))
 				.rotz(180)
 				.setColor(javafx.scene.paint.Color.DARKGREY)
 			CSG kneetop  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Knee Top.stl"))
 				.rotz(180)
 				.setColor(javafx.scene.paint.Color.DARKGREY)
 			CSG dlimb  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Drive Limb.stl"))
 				.rotz(180)
 				.movex(-55.5)
 				.movez(16.5)
 				.setColor(javafx.scene.paint.Color.YELLOW)
 			CSG elimb  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Encoder Limb.stl"))
 				.rotz(180)
 				.rotx(180)
@@ -107,20 +107,20 @@ return new ICadGenerator(){
 
 		if(linkIndex ==2){
 			CSG foot  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Foot.stl"))
 				.rotz(180)
 				.rotx(180)
 				.setColor(javafx.scene.paint.Color.DARKGREY)
 			CSG dlimb  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Drive Limb.stl"))
 				.rotz(180-7.5)
 				.movex(-60)
 				.movez(16.5)
 				.setColor(javafx.scene.paint.Color.YELLOW)
 			CSG elimb  = Vitamins.get(ScriptingEngine.fileFromGit(
-				"https://github.com/OperationSmallKat/Luna.git",
+				"https://github.com/JansenSmith/Luna_Parameterization.git",
 				"Encoder Limb.stl"))
 				.rotz(180+7.5)
 				.rotx(180)
